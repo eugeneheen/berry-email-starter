@@ -34,7 +34,9 @@
     
        public boolean save(User user) {
            // ......保存用户代码省略
-           this.emailService.sendBySmtp("abc@qq.com", "用户注册通知", "您已成功注册一个xxx系统用户，注册用户名是xxxx，初始密码是xxx。请收到邮件后立即修改初始密码！");
+           this.emailService.sendBySmtp("用户注册通知", "您已成功注册一个xxx系统用户，注册用户名是xxxx，初始密码是xxx。请收到邮件后立即修改初始密码！", "abc@qq.com");
+           // 同事发送多用户伪代码
+           // this.emailService.sendBySmtp("用户注册通知", "您已成功注册一个xxx系统用户，注册用户名是xxxx，初始密码是xxx。请收到邮件后立即修改初始密码！", new String [] {"abc@qq.com", "king@qq.com", "car@qq.com"});
        }
    }
    ```
