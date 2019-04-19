@@ -10,8 +10,5 @@ import org.apache.commons.mail.EmailException;
  */
 public interface IEmailService {
 
-
-    String sendBySmtp(String addressees, String title, String content) throws EmailException;
-
     String sendBySmtp(String title, String content, String... addressees) throws EmailException;
 }

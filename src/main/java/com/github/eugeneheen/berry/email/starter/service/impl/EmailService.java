@@ -18,9 +18,8 @@ public class EmailService implements IEmailService {
 
     @Setter
     private EmailProps emailProps;
-
     @Override
-    public String sendBySmtp(String addressees, String title, String content) throws EmailException {
+    public String sendBySmtp(String title, String content, String... addressees) throws EmailException {
         Email email = new SimpleEmail();
         email.setHostName(this.emailProps.getSmtpAddr());
         email.setSmtpPort(this.emailProps.getSmtpPort());
@@ -31,10 +30,5 @@ public class EmailService implements IEmailService {
         email.setSubject(title);
         email.setMsg(content);
         return email.send();
-    }
-
-    @Override
-    public String sendBySmtp(String title, String content, String... addressees) throws EmailException {
-        return null;
     }
 }
