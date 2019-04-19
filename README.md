@@ -12,7 +12,7 @@
     </dependency>
   </dependencies>
   ```
-- 配置邮件返送账号信息，在需要使用此starter的工程的src\main\resources目录下config目录下的email.properties配置文件中配置发送邮件相关属性及值
+- 配置邮件返送账号信息，在需要使用此starter的工程的src\main\resources目录下的config目录中的email.properties配置文件中配置发送邮件相关属性及值
   ```vim
   # 邮件SMTP发送地址
   email.smtpAddr: smtp.qq.com
