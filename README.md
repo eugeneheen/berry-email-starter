@@ -16,11 +16,11 @@
   ```vim
   # 邮件SMTP发送地址
   email.smtpAddr: smtp.qq.com
-  # 邮件账户
+  # 邮件SMTP发送端口
   email.smtpPort: 465
-  # 邮件账户密码
+  # 邮件账户
   email.userName: xxxxxx@qq.com
-  # 是否开启SSL
+  # 邮件账户密码
   email.password: xxxxxx
   # 邮件发送方地址
   email.addresser: xxxxxx@qq.com
