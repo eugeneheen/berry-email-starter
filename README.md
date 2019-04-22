@@ -16,18 +16,18 @@
   ```vim
   # 邮件SMTP发送地址
   email.smtpAddr: smtp.qq.com
-  # 邮件账户
+  # 邮件SMTP发送端口
   email.smtpPort: 465
-  # 邮件账户密码
+  # 邮件账户
   email.userName: xxxxxx@qq.com
-  # 是否开启SSL
+  # 邮件账户密码
   email.password: xxxxxx
   # 邮件发送方地址
   email.addresser: xxxxxx@qq.com
   ```
- - 在需要使用的业务成直接注入邮件服务接口依赖，调用相关方法即可
-   ```java
-   public class UserService implements IUserService {
+- 在需要使用的业务成直接注入邮件服务接口依赖，调用相关方法即可
+  ```java
+  public class UserService implements IUserService {
     
        @Autowired
        private IEmailService emailService;
@@ -38,6 +38,6 @@
            // 同时发送多用户伪代码
            // this.emailService.sendBySmtp("用户注册通知", "您已成功注册一个xxx系统用户，注册用户名是xxxx，初始密码是xxx。请收到邮件后立即修改初始密码！", new String [] {"abc@qq.com", "king@qq.com", "car@qq.com"});
        }
-   }
-   ```
-   >sendBySmtp方法发送的三个参数依次是：邮件标题、邮件正文内容、收件人邮箱地址列表（类型String... []）
+  }
+  ```
+  >sendBySmtp方法发送的三个参数依次是：邮件标题、邮件正文内容、收件人邮箱地址列表（类型String... []）
